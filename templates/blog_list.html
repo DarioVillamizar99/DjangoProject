@@ -1,0 +1,12 @@
+<h1>algo</h1>
+<br>
+{% for post in  posts%}
+<h3>
+<a href="{% url "blog:detail" post.id %}">{{post.title}}</a> 
+<a href="{% url "blog:update" post.id %}">Update</a>
+<a href="{% url "blog:delete" post.id %}">Delete</a>
+</h3>
+{% endfor %}
+<br>
+para crear click en <a href="{% url "blog:create" %}">create</a>
+
